@@ -39,5 +39,12 @@ The goal of this project is to create tools that make it easier to download the 
 
    d. Now you're ready to query the streetlights database!
 
+## Resources for working with the data
+* **Time** - if you want to download data from a specific timeframe, you have to specify the start and end times (`startTime` and `endTime`) in milliseconds since January 1, 1970 00:00:00 UTC. You can use [this website to convert back and forth](https://currentmillis.com/).
+* **Location** - if you want to limit your search to a geographic location, you have to enter boundary box information in latitude and longitude (`bbox`). The default `bbox` set in the environment variables list is -90:-180,90:180, which is the entire world. (*We need resources for ways to get that information. [Here's one](https://gps-coordinates.org/coordinate-converter.php), but you need to have a specific address*)
 
-      
+## Official guides, FAQs, etc
+* [CityIQ documentation](https://docs.cityiq.io/Default.htm)
+* [Detailed description of data types](https://github.com/CityIQ/OnBoarding/blob/master/API-Maps.pdf) available for each category. You might have to download this pdf to get it to open.
+* CityIQ's [basic guide to working with Postman](https://github.com/CityIQ/OnBoarding/blob/master/OnBoarding_CityIQ_Postman_and_FAQ.pdf) (with examples of GET requests)
+* The City of San Diego's [Smart Streetlights overview](https://www.sandiego.gov/sustainability/energy-and-water-efficiency/programs-projects/smart-city)
