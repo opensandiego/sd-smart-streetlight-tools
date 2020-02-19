@@ -10,8 +10,7 @@ The goal of this project is to create tools that make it easier to download the 
 1. (Optional) Download this CityIQ repository: [https://github.com/CityIQ/OnBoarding]  
    You get a lot of documentation if you download the repo, but you really only need to download these two files: **NEW-CityIQ-OnBoarding-Collection-PostMigration.postman_collection.json** and **New-Environment-Please-Complete-Independently.postman_environment.json**
    
-2. Download and install [Postman](https://www.postman.com/downloads/)  
-   You may have to create a free Postman account to get this to work (*I'm not sure, someone verify please?*)
+2. Download and install [Postman](https://www.postman.com/downloads/)
   
 3. Open Postman  
    a. Click the 'Import' button on the top left (*Insert jpeg here*)  
