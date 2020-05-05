@@ -1,12 +1,34 @@
 # sd-smart-streetlight-tools
 
-The City of San Diego has installed over 4,000 "intelligent sensors" in streetlights across the entire city. The hope is to leverage the data from these sensors to improve liveability by optimizing traffic flow and parking, monitoring environmental conditions, and enhancing resident safety. The City welcomes public interaction with the data, but at the moment obtaining the data using the CityIQ API is not intuitive. This project's goal is to provide resources and code to simplify the process of downloading data of interest.
+The City of San Diego has installed over 2,000 "intelligent sensors" in streetlights across the entire city. The hope is to leverage the data from these sensors to improve liveability by optimizing traffic flow and parking, monitoring environmental conditions, and enhancing resident safety. The City welcomes public interaction with the data, but at the moment obtaining the data using the CityIQ API is not intuitive. This project's goal is to provide resources and code to simplify the process of downloading data of interest.
 
 ## What data is available?
 [This map](https://sandiego.maps.arcgis.com/apps/webappviewer/index.html?id=8d8dcd752def4b55be402fca2760b7a3) shows where sensors are installed across San Diego.
 
 ## How do I access the data?
-The goal of this project is to create tools that make it easier to download the data. Until then, this is the procedure:
+Open San Diego members are creating tools for different purposes. See below for your options
+
+#### Download Traffic/Pedestrian/Bicycle events using Python
+Scripts and resources are available in these subdirectories:
+* Download_Traffic_Events
+* Download_Pedestrian_Events
+* Download_Bicycle_Events
+
+Within each of those three subdirectories, you'll see a resources/ subdirectory which contains:
+* validated_\[event type\]_sensors.csv - this file has information about each sensor that is currently validated and operational. This list will be updated over the next couple of years (through 2021) as the City reassigns sensors to different functions
+* map.txt - this is a text file that links to a Tableau Public map showing the location of all the sensors of that type. You can use this to decide which sensors you would like to analyze
+* Sensor_List.txt - you need to edit this text file to list the `assetUid`s of the sensors you want data from 
+
+The scripts all work the same way. Using the Download_Traffic_Events scripts as an example, these are the steps you take:
+1. Edit the Download_Traffic_Events/resources/Sensor_List.txt so that it contains the full `assetUid` names of each sensor you want data from
+2. Run Update_Traffic_data.py
+
+This will create a subdirectory for each sensor (labeled with the first part of the assetUid code) in your local data/ subdirectory. This will contain:
+* a Download_Traffic_Events/data/raw/ directory that contains CSV files of <b>all</b> of the data from that sensor. Sensor data is collected in 30-second chunks, and is saved for a single month at a time
+* one CSV file that has data aggregated per hour
+* one CSV file that has data aggregated per day
+
+#### Explore the CityIQ APIs using Postman
 1. (Optional) Download this CityIQ repository: [https://github.com/CityIQ/OnBoarding]  
    You get a lot of documentation if you download the repo, but you really only need to download these two files: **NEW-CityIQ-OnBoarding-Collection-PostMigration.postman_collection.json** and **New-Environment-Please-Complete-Independently.postman_environment.json**
    
@@ -38,7 +60,7 @@ The goal of this project is to create tools that make it easier to download the 
 
    d. Now you're ready to query the streetlights database!
 
-## Resources for working with the data
+## Other resources for working with the data
 * **Time** - if you want to download data from a specific timeframe, you have to specify the start and end times (`startTime` and `endTime`) in milliseconds since January 1, 1970 00:00:00 UTC. You can use [this website to convert back and forth](https://currentmillis.com/).
 * **Location** - if you want to limit your search to a geographic location, you have to enter boundary box information in latitude and longitude (`bbox`). The default `bbox` set in the environment variables list is -90:-180,90:180, which is the entire world. (*We need resources for ways to get that information. [Here's one](https://gps-coordinates.org/coordinate-converter.php), but you need to have a specific address*)
 
