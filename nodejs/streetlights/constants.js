@@ -1,0 +1,24 @@
+const EVENT_TYPES = ['PKIN','PKOUT','PEDEVT','TFEVT','HUMIDITY','PRESSURE','TEMPERATURE','METROLOGY','TIMESERIES','BICYCLE']
+const MEDIA_TYPES = ['IMAGE','VIDEO']
+const ASSET_TYPES = ['CAMERA','ENV_SENSOR','NODE','EM_SENSOR']
+const SENSOR_TYPES = ['CAMERA','ENV_SENSOR','EM_SENSOR']
+const LOCATION_TYPES = ['PARKING_ZONE','TRAFFIC_LANE','WALKWAY']
+
+const PAGE_SIZE = 5000
+
+const FAILURE_RESPONSES = [
+  'forbidden',
+  'unauthorized',
+  'internal server error',
+  'service temporarily unavailable'
+]
+
+module.exports = {
+  EVENT_TYPES,
+  MEDIA_TYPES,
+  ASSET_TYPES,
+  MEDIA_TYPES,
+  LOCATION_TYPES,
+  PAGE_SIZE,
+  FAILURE_RESPONSES
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./client.js" defer></script>
+  </head>
+
+  <body>
+    <div id="mapContainer">
+      <div id="map"></div>
+    </div>
+    <div id="infoContainer" class="padded">
+      <div class="box padded green left">
+        <div>CityIQ box:</div>
+        <div class="box-coordinates"></div>
+      </div>
+      <div class="center padded yellow left">
+        <div>center:</div>
+        <div class="center-coordinates"></div>
+      </div>
+      <div class="center padded blue left">
+        <div>time:</div>
+        <div class="current-time"></div>
+        <div class="stop">stop</div>
+      </div>
+    </div>
+  </body>
+</html>

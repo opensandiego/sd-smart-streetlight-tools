@@ -1,0 +1,27 @@
+{
+  "name": "browse-san-diego-streetlights",
+  "version": "0.1.0",
+  "description": "A node.js and express app to browse smart streetlights in San Diego.",
+  "main": "server.js",
+  "scripts": {
+    "start": "PORT=8123 nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "^4.17.1",
+    "jwt-decode": "^2.2.0",
+    "nodemon": "^2.0.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express"
+  ]
+}
