@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body { margin: 0; padding: 0; }
+/* default to map on top, info on bottom */
+#mapContainer, #infoContainer {
+  width: 100%;
+}
+#infoContainer {
+  height: 30%;
+  line-height: 1.8em;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'courier';
+}
+#mapContainer {
+  height: 70%;
+}
+#map { height: 100%; }
+
+button {
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+.padded { padding: 1em; }
+.left { text-align: left; }
+.green { background-color: #d9ffdb; }
+.yellow { background-color: #fffcd9; }
+.blue { background-color: #d9eeff; }
+
+.mapboxgl-popup-content button {
+  width: 30px;
+  height: 30px;
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+.mapboxgl-popup-content div {
+  border-bottom: 1px solid #dedede;
+}
+
+.mapboxgl-popup-content div:last-child {
+  border-bottom: none;
+}
+
+/* on wide screen (desktop/laptop...phone in landscape),
+ put the map on the left and info on the right */
+@media screen and (min-width: 1300px) {
+  #mapContainer, #infoContainer {
+    display: inline-block;
+  }
+  #infoContainer {
+    height: 100%;
+    width: 30%;
+    text-align: center;
+  }
+  #mapContainer {
+    float: left;
+    height: 100%;
+    width: 70%;
+  }
+}

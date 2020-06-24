@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./bulma.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="mapContainer">
+      <div id="map"></div>
+    </div>
+    <div id="infoContainer" class="padded">
+      <div class="box center padded left">
+        <div>Locations</div>
+        <div>
+          <div>Type:</div>
+          <div>
+            <input type="radio" id="zone1" name="zone" value="PARKING_ZONE" checked>
+            <label for="zone1">Parking</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone2" name="zone" value="TRAFFIC_LANE">
+            <label for="zone2">Traffic</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone3" name="zone" value="WALKWAY">
+            <label for="zone3">Walkway</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="box padded left">
+        <div>CityIQ box:</div>
+        <div class="box-coordinates"></div>
+      </div>
+
+      <div class="box center padded left">
+        <div>center:</div>
+        <div class="center-coordinates"></div>
+      </div>
+    </div>
+
+    <script src="./browse-locations.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+Streetlights traffic events:
+- < 10k per day:  some days had ~5500, others closer to 9k
+- seeing two objects for a single event ID:  one for small vehicles, one for large

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./bulma.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div id="mapContainer">
+      <div id="map"></div>
+    </div>
+    <div id="infoContainer" class="padded">
+      <div class="box center padded left">
+        <div>
+          <div class="title is-6">Zone</div>
+          <div>
+            <input type="radio" id="zone1" name="zone" value="SD-IE-ENVIRONMENTAL" checked>
+            <label for="zone1">Environmental</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone2" name="zone" value="SD-IE-TRAFFIC">
+            <label for="zone2">Traffic</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone3" name="zone" value="SD-IE-PEDESTRIAN">
+            <label for="zone3">Pedestrian</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone4" name="zone" value="SD-IE-PARKING">
+            <label for="zone4">Parking</label>
+          </div>
+
+          <div>
+            <input type="radio" id="zone5" name="zone" value="SD-IE-BICYCLE">
+            <label for="zone5">Bicycle</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box padded left">
+        <div>
+          <div class="title is-6">Assets</div>
+          <button class="button" id="download-assets">Download points on the map as a .csv</button>
+        </div>
+      </div>
+
+      <div class="box center padded left">
+        <div class="title is-6">Events</div>
+        <div>Zoom to 5 or less streetlights and select a date:</div>
+        <label for="streetlights-start">From:</label>
+        <input type="date" id="streetlights-start" name="streetlights-end" value="2020-04-04" min="2020-01-01" max="2020-06-01">
+        <labe for="streetlights-end">To:</label>
+        <input type="date" id="streetlights-end" name="streetlights-end" value="2020-04-05" min="2020-01-01" max="2020-06-01">
+        <div>
+          <button class="button" id="download-events">Download events as a .csv</button>
+        </div>
+        <div class="notification is-warning is-hidden">
+          <button class="delete"></button>
+          Zoom in to five or less streetlights to download events.
+        </div>
+      </div>
+    </div>
+
+    <script src="./browse-assets.js" defer></script>
+  </body>
+</html>
