@@ -1,5 +1,8 @@
 # sd-smart-streetlight-tools
 
+**NOTICE (8/11/2020)** *This project is on hiatus as the City works out how to implement its contract with new CityIQ owner Ubicquia. Until then, data from the smart streetlights is not available.*
+
+
 The City of San Diego has installed over 2,000 "intelligent sensors" in streetlights across the entire city. The hope is to leverage the data from these sensors to improve liveability by optimizing traffic flow and parking, monitoring environmental conditions, and enhancing resident safety. The City welcomes public interaction with the data, but at the moment obtaining the data using the CityIQ API is not intuitive. This project's goal is to provide resources and code to simplify the process of downloading data of interest.
 
 ## What data is available?
